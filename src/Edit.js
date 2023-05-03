@@ -22,9 +22,6 @@ const Edit = ({ url, posts, setpost, loc }) => {
       body: JSON.stringify({ art: a, title: e }),
     }
     const res = await api(requrl, method)
-    if (res) {
-      alert(res)
-    }
     let temp = posts.filter((it) => it.id !== item.id)
     setpost([
       ...temp,
