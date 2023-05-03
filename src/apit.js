@@ -1,4 +1,4 @@
-const api = async (url = "", path = null, err = null) => {
+const apit = async (url = "", path = null, err = null) => {
   try {
     const res = await fetch(url, path)
     if (!res.ok) {
@@ -10,4 +10,4 @@ const api = async (url = "", path = null, err = null) => {
     return err
   }
 }
-export default api
+export default apit

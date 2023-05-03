@@ -9,7 +9,7 @@ import About from "./About"
 import Missing from "./Missing"
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom"
 import { useState, useEffect } from "react"
-import api from "./api"
+import apit from "./apit"
 const App = () => {
   const navigate = useNavigate()
   const loc = useLocation()
@@ -80,7 +80,7 @@ const App = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newobj),
     }
-    await api(url, method)
+    await apit(url, method)
   }
   return (
     <div className='App'>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import api from "./api"
+import api from "./apit"
 
 const Edit = ({ url, posts, setpost, loc }) => {
   const { id } = useParams()
