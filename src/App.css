@@ -38,6 +38,10 @@
   background-color: black;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 .nav > ul {
   list-style-type: none;
@@ -80,6 +84,14 @@
   border-radius: 6px;
   height: 2rem;
   width: 100%;
+}
+.form > input::placeholder {
+  position: relative;
+  left: 15px;
+}
+.form > input::-moz-input-placeholder {
+  position: relative;
+  left: 15px;
 }
 .post,
 .m-post {
