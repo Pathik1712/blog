@@ -119,16 +119,6 @@
 .m-post {
   border-bottom: 2px solid rgb(130, 128, 128);
 }
-footer {
-  background-color: deepskyblue;
-  position: fixed;
-  bottom: 0;
-  height: 3rem;
-  width: 100%;
-  text-transform: capitalize;
-  color: white;
-  text-align: center;
-}
 .wrap {
   --v1: 25rem;
   position: relative;

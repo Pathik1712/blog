@@ -1,7 +1,6 @@
 import "./App.css"
 import Edit from "./Edit"
 import Header from "./Header"
-import Footer from "./Footer"
 import Nav from "./Nav"
 import Home from "./Home"
 import Newpost from "./Newpost"
@@ -125,7 +124,6 @@ const App = () => {
           element={<Missing />}
         />
       </Routes>
-      <Footer />
     </div>
   )
 }
