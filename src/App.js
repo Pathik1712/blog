@@ -15,13 +15,39 @@ const App = () => {
   const loc = useLocation()
   const [search_result, setsearchresult] = useState([])
   const [search, setsearch] = useState("")
-  const [posts, setpost] = useState([])
+  const [posts, setpost] = useState([
+    {
+      id: 1,
+      title: "first post",
+      date: "jan 27,2022,11:37 am",
+      art: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit provident officia aliquam rem cum debitis amet, perspiciatis cupiditate non. Veritatis libero eaque ab dolor deserunt earum quos a officia. Velit recusandae ex iusto eligendi, neque, id perferendis expedita debitis amet, aliquid libero ratione voluptatum exercitationem? Ipsam non voluptatum necessitatibus aspernatur. Suscipit quibusdam doloribus cumque voluptate inventore amet aspernatur perferendis voluptatibus consectetur. Quod ex debitis, enim nihil pariatur nostrum cumque ipsa dicta sint natus doloribus voluptates voluptas ad neque iusto totam incidunt iste ab perferendis atque non aliquam obcaecati dolorem molestias! Aliquam vero ullam nesciunt possimus consequuntur ipsum itaque voluptatem ipsam?",
+    },
+    {
+      id: 2,
+      title: "second post",
+      date: "jan 27,2022,11:37 am",
+      art: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit provident officia aliquam rem cum debitis amet, perspiciatis cupiditate non. Veritatis libero eaque ab dolor deserunt earum quos a officia. Velit recusandae ex iusto eligendi, neque, id perferendis expedita debitis amet, aliquid libero ratione voluptatum exercitationem? Ipsam non voluptatum necessitatibus aspernatur. Suscipit quibusdam doloribus cumque voluptate inventore amet aspernatur perferendis voluptatibus consectetur. Quod ex debitis, enim nihil pariatur nostrum cumque ipsa dicta sint natus doloribus voluptates voluptas ad neque iusto totam incidunt iste ab perferendis atque non aliquam obcaecati dolorem molestias! Aliquam vero ullam nesciunt possimus consequuntur ipsum itaque voluptatem ipsam?",
+    },
+    {
+      id: 3,
+      title: "third post",
+      date: "jan 27,2022,11:37 am",
+      art: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit provident officia aliquam rem cum debitis amet, perspiciatis cupiditate non. Veritatis libero eaque ab dolor deserunt earum quos a officia. Velit recusandae ex iusto eligendi, neque, id perferendis expedita debitis amet, aliquid libero ratione voluptatum exercitationem? Ipsam non voluptatum necessitatibus aspernatur. Suscipit quibusdam doloribus cumque voluptate inventore amet aspernatur perferendis voluptatibus consectetur. Quod ex debitis, enim nihil pariatur nostrum cumque ipsa dicta sint natus doloribus voluptates voluptas ad neque iusto totam incidunt iste ab perferendis atque non aliquam obcaecati dolorem molestias! Aliquam vero ullam nesciunt possimus consequuntur ipsum itaque voluptatem ipsam?",
+    },
+    {
+      id: 4,
+      title: "first blog",
+      date: "mar 25,2023,04:01 pm",
+      art: "hi welcome to this website.",
+    },
+  ])
   const url = " http://localhost:3500/posts"
   useEffect(() => {
     const func = async () => {
       const res = await fetch(url)
       const response = await res.json()
-      setpost(response)
+      let tempres = [...posts, response]
+      setpost(tempres)
     }
     func()
   }, [])
